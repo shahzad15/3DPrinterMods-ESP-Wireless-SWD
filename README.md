@@ -20,5 +20,9 @@ Official open-source repository for **Wireless SWD Firmware Flashing & Remote Un
   * `3V3` -> `3.3V VCC`
 
 ## 🛒 Recommended Hardware Deals
-* [ESP32 Modules & Wiring Gear on AliExpress](https://s.click.aliexpress.com/e/_c3KxC2ij)
-* [BigTreeTech SKR Mainboards on AliExpress](https://s.click.aliexpress.com/e/_c4lyGrWX)
+
+| Hardware Component | Product Deal |
+| :--- | :--- |
+| **BigTreeTech SKR 3 & SKR Mini E3 V3.0 Mainboard** | <a href="https://s.click.aliexpress.com/e/_c3ZtFnwf" target="_blank"><img src="https://ae01.alicdn.com/kf/Sdef2a16cb4e54d9dad7a13c8556f0a65s.png_80x80.png" width="80" height="80" /></a><br>[**Shop BigTreeTech SKR Mainboard Deal →**](https://s.click.aliexpress.com/e/_c3ZtFnwf) |
+| **ESP32 Modules & Wiring Accessories** | <a href="https://s.click.aliexpress.com/e/_c3KxC2ij" target="_blank"><img src="https://ae01.alicdn.com/kf/S70572b9b5c5845559619f26ecd2c91d9u.jpg_80x80.jpg" width="80" height="80" /></a><br>[**Shop ESP32 Module Deal →**](https://s.click.aliexpress.com/e/_c3KxC2ij) |
+| **WEMOS D1 Mini V4.0.0 Type-C USB WiFi Board (ESP8266 4MB)** | <a href="https://s.click.aliexpress.com/e/_c41U1LKR" target="_blank"><img src="https://ae01.alicdn.com/kf/S575dd42364e6406d8ce64f97b162ef0bM.jpg_80x80.jpg" width="80" height="80" /></a><br>[**Shop WEMOS D1 Mini Deal →**](https://s.click.aliexpress.com/e/_c41U1LKR) |
