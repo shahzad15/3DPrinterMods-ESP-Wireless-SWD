@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+  <rect width="1600" height="1050" fill="#fff"/>
+  <g fill="none" stroke="#000" stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
+    <!-- ESP and BTT blocks -->
+    <rect x="45" y="230" width="300" height="520" rx="5"/>
+    <rect x="1160" y="275" width="385" height="520" rx="5"/>
+
+    <!-- TFT power header, official top-view order -->
+    <rect x="1010" y="75" width="535" height="125" rx="4"/>
+    <path d="M1040 130H1515M1040 130V180M1135 130V180M1230 130V180M1325 130V180M1420 130V180M1515 130V180"/>
+    <circle cx="1372" cy="180" r="7" fill="#fff"/>
+    <circle cx="1467" cy="180" r="7" fill="#fff"/>
+
+    <!-- TFT +5 V to D1 Mini 5V -->
+    <path d="M1467 180V215H650V270H345"/>
+    <!-- TFT GND uses the same ground net symbol; it never crosses the +5 V pin. -->
+    <path d="M1372 180V205M1352 205H1392M1358 213H1386M1364 221H1380"/>
+
+    <!-- Local decoupling from 5 V to ground symbols -->
+    <path d="M720 215V235M697 235H743M697 250H743M720 250V265M700 265H740M706 273H734M712 281H728"/>
+    <path d="M820 215V235M797 235H843M797 250H843M820 250V265M800 265H840M806 273H834M812 281H828"/>
+
+    <!-- A0 VTREF sense -->
+    <path d="M345 330H485"/>
+    <rect x="485" y="315" width="90" height="30"/>
+    <path d="M575 330H1160"/>
+    <circle cx="605" cy="330" r="7" fill="#000"/>
+    <path d="M605 330V365"/>
+    <rect x="590" y="365" width="30" height="65"/>
+    <path d="M605 430V445M585 445H625M591 453H619M597 461H613"/>
+
+    <!-- SWDIO -->
+    <path d="M345 420H485"/>
+    <rect x="485" y="405" width="90" height="30"/>
+    <path d="M575 420H1160"/>
+
+    <!-- Ground -->
+    <path d="M345 510H1160M405 510V805"/>
+
+    <!-- SWCLK -->
+    <path d="M345 600H485"/>
+    <rect x="485" y="585" width="90" height="30"/>
+    <path d="M575 600H1160"/>
+
+    <!-- D6 to 2N3904 base -->
+    <path d="M345 690H485"/>
+    <rect x="485" y="675" width="100" height="30"/>
+    <path d="M585 690H710"/>
+    <circle cx="680" cy="690" r="7" fill="#000"/>
+    <!-- Base pulldown -->
+    <path d="M680 690V720"/>
+    <rect x="665" y="720" width="30" height="60"/>
+    <path d="M680 780V805"/>
+
+    <!-- Q1 NPN symbol -->
+    <circle cx="780" cy="690" r="72"/>
+    <path d="M710 690H750M750 645V735M750 655H785L825 615M750 725H785L825 765"/>
+    <path d="M799 744l18 16-24 3z" fill="#000"/>
+    <!-- emitter to ground -->
+    <path d="M825 765V805"/>
+    <!-- collector through 100R to NRST -->
+    <path d="M825 615H875V690H920"/>
+    <rect x="920" y="675" width="95" height="30"/>
+    <path d="M1015 690H1160"/>
+
+    <!-- J11 pin circles -->
+    <circle cx="1160" cy="330" r="8" fill="#fff"/>
+    <circle cx="1160" cy="420" r="8" fill="#fff"/>
+    <circle cx="1160" cy="510" r="8" fill="#fff"/>
+    <circle cx="1160" cy="600" r="8" fill="#fff"/>
+    <circle cx="1160" cy="690" r="8" fill="#fff"/>
+
+    <!-- Warning boxes -->
+    <rect x="55" y="845" width="1490" height="80" rx="4"/>
+    <rect x="55" y="940" width="1490" height="70" rx="4"/>
+  </g>
+
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif">
+    <text x="800" y="48" font-size="34" font-weight="700" text-anchor="middle">ESP8266 D1 MINI SWD PROGRAMMER — POWERED FROM SKR +5 V</text>
+
+    <text x="1277" y="108" font-size="24" font-weight="700" text-anchor="middle">SKR MINI E3 V3.0 TFT HEADER — TOP VIEW</text>
+    <text x="1087" y="166" font-size="19" text-anchor="middle">RST</text>
+    <text x="1182" y="166" font-size="19" text-anchor="middle">RX2</text>
+    <text x="1277" y="166" font-size="19" text-anchor="middle">TX2</text>
+    <text x="1372" y="166" font-size="19" font-weight="700" text-anchor="middle">GND</text>
+    <text x="1467" y="166" font-size="19" font-weight="700" text-anchor="middle">+5V</text>
+
+    <text x="195" y="270" font-size="29" font-weight="700" text-anchor="middle">ESP8266 D1 MINI</text>
+    <text x="330" y="278" font-size="22" text-anchor="end">5V</text>
+    <text x="330" y="338" font-size="22" text-anchor="end">A0</text>
+    <text x="330" y="428" font-size="22" text-anchor="end">D2 / GPIO4</text>
+    <text x="330" y="518" font-size="22" text-anchor="end">GND</text>
+    <text x="330" y="608" font-size="22" text-anchor="end">D1 / GPIO5</text>
+    <text x="330" y="698" font-size="22" text-anchor="end">D6 / GPIO12</text>
+
+    <text x="720" y="205" font-size="18" text-anchor="middle">470 µF</text>
+    <text x="820" y="205" font-size="18" text-anchor="middle">100 nF</text>
+    <text x="530" y="308" font-size="20" text-anchor="middle">10 kΩ</text>
+    <text x="628" y="405" font-size="19">100 kΩ</text>
+    <text x="720" y="365" font-size="18" font-weight="700">VTREF SENSE ONLY — NOT ESP POWER</text>
+    <text x="530" y="398" font-size="20" text-anchor="middle">47 Ω</text>
+    <text x="530" y="578" font-size="20" text-anchor="middle">47 Ω</text>
+    <text x="535" y="668" font-size="20" text-anchor="middle">4.7 kΩ</text>
+    <text x="657" y="755" font-size="18" text-anchor="end">100 kΩ</text>
+    <text x="780" y="585" font-size="23" font-weight="700" text-anchor="middle">Q1 2N3904 (NPN)</text>
+    <text x="730" y="678" font-size="20" font-weight="700">B</text>
+    <text x="837" y="620" font-size="20" font-weight="700">C</text>
+    <text x="837" y="775" font-size="20" font-weight="700">E</text>
+    <text x="967" y="668" font-size="20" text-anchor="middle">100 Ω</text>
+    <text x="850" y="790" font-size="18" font-weight="700">OPEN-COLLECTOR RESET</text>
+    <text x="760" y="830" font-size="18" font-weight="700">COMMON GROUND</text>
+
+    <text x="1352" y="305" font-size="25" font-weight="700" text-anchor="middle">BTT SKR MINI E3 V3.0 — J11 SWD</text>
+    <text x="1185" y="338" font-size="22">1  VTREF 3.3 V (SENSE ONLY)</text>
+    <text x="1185" y="428" font-size="22">2  SWDIO / PA13</text>
+    <text x="1185" y="518" font-size="22">3  GND</text>
+    <text x="1185" y="608" font-size="22">4  SWCLK / PA14</text>
+    <text x="1185" y="698" font-size="22">5  NRST / PF2</text>
+
+    <text x="800" y="878" font-size="24" font-weight="700" text-anchor="middle">CONFIRM TFT +5 V AND GND WITH A MULTIMETER BEFORE CONNECTING.</text>
+    <text x="800" y="910" font-size="21" text-anchor="middle">J11 pin 1 is 3.3 V sense only. Never connect J11 pin 1 to ESP 5V or 3.3V.</text>
+    <text x="800" y="974" font-size="23" font-weight="700" text-anchor="middle">DISCONNECT SKR +5 V BEFORE PLUGGING USB INTO THE D1 MINI.</text>
+    <text x="800" y="999" font-size="17" text-anchor="middle">Verify the exact 2N3904 E/B/C pin order from its manufacturer’s datasheet.</text>
+  </g>
+</svg>
