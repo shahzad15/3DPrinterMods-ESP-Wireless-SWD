@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .title{font:700 38px Arial,sans-serif;fill:#10233f}.subtitle{font:22px Arial,sans-serif;fill:#40546f}
+      .head{font:700 24px Arial,sans-serif;fill:#fff}.label{font:700 21px Arial,sans-serif;fill:#10233f}
+      .small{font:18px Arial,sans-serif;fill:#263b56}.tiny{font:16px Arial,sans-serif;fill:#40546f}
+      .wire{fill:none;stroke:#16824b;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .sense{fill:none;stroke:#8c54b5;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .reset{fill:none;stroke:#d66b20;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .ground{fill:none;stroke:#2d415d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .res{fill:#fff6d8;stroke:#8a6811;stroke-width:4}.node{fill:#10233f}.pin{fill:#fff;stroke:#10233f;stroke-width:3}
+    </style>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f7fb"/>
+  <text x="800" y="60" text-anchor="middle" class="title">ESP8266 D1 mini + 2N3904 → BTT SKR Mini E3 V3.0 SWD</text>
+  <text x="800" y="95" text-anchor="middle" class="subtitle">Fully labeled connections • NPN open-collector reset • 3.3 V SWD logic</text>
+
+  <!-- ESP8266 board -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="145" width="330" height="680" rx="28" fill="#1a74a8" stroke="#0b476c" stroke-width="5"/>
+    <rect x="125" y="690" width="220" height="110" rx="12" fill="#d9dde2" stroke="#6f7883" stroke-width="4"/>
+    <rect x="164" y="748" width="142" height="52" fill="#222d38"/>
+    <rect x="118" y="185" width="234" height="165" rx="12" fill="#d5d8d5" stroke="#7b817d" stroke-width="4"/>
+    <path d="M145 225h180M145 255h180M145 285h180M145 315h180" stroke="#9da49e" stroke-width="5"/>
+  </g>
+  <text x="235" y="390" text-anchor="middle" class="head">ESP8266 D1 mini</text>
+  <text x="235" y="425" text-anchor="middle" style="font:18px Arial;fill:#dcefff">Arduino / C++ prototype</text>
+
+  <!-- ESP pins -->
+  <g>
+    <circle cx="400" cy="220" r="13" class="pin"/><text x="370" y="227" text-anchor="end" class="label">A0</text>
+    <circle cx="400" cy="310" r="13" class="pin"/><text x="370" y="317" text-anchor="end" class="label">D2 / GPIO4</text>
+    <circle cx="400" cy="400" r="13" class="pin"/><text x="370" y="407" text-anchor="end" class="label">GND</text>
+    <circle cx="400" cy="490" r="13" class="pin"/><text x="370" y="497" text-anchor="end" class="label">D1 / GPIO5</text>
+    <circle cx="400" cy="620" r="13" class="pin"/><text x="370" y="627" text-anchor="end" class="label">D6 / GPIO12</text>
+    <circle cx="400" cy="760" r="13" class="pin"/><text x="370" y="767" text-anchor="end" class="label">5V</text>
+  </g>
+
+  <!-- J11 connector -->
+  <g filter="url(#shadow)">
+    <rect x="1250" y="145" width="290" height="500" rx="24" fill="#253849" stroke="#10233f" stroke-width="5"/>
+    <rect x="1285" y="190" width="220" height="405" rx="12" fill="#16232e" stroke="#71808c" stroke-width="3"/>
+  </g>
+  <text x="1395" y="178" text-anchor="middle" class="head">BTT J11 (SWD)</text>
+  <g>
+    <circle cx="1250" cy="220" r="13" class="pin"/><text x="1300" y="227" class="head">1  3.3 V / VTREF</text>
+    <circle cx="1250" cy="310" r="13" class="pin"/><text x="1300" y="317" class="head">2  SWDIO / PA13</text>
+    <circle cx="1250" cy="400" r="13" class="pin"/><text x="1300" y="407" class="head">3  GND</text>
+    <circle cx="1250" cy="490" r="13" class="pin"/><text x="1300" y="497" class="head">4  SWCLK / PA14</text>
+    <circle cx="1250" cy="580" r="13" class="pin"/><text x="1300" y="587" class="head">5  RST / PF2-NRST</text>
+  </g>
+
+  <!-- SWDIO -->
+  <path class="wire" d="M413 310H565"/>
+  <rect x="565" y="288" width="120" height="44" rx="8" class="res"/>
+  <text x="625" y="317" text-anchor="middle" class="label">47 Ω</text>
+  <path class="wire" d="M685 310H1237"/>
+  <text x="920" y="296" text-anchor="middle" class="small">SWDIO (bidirectional)</text>
+
+  <!-- Ground -->
+  <path class="ground" d="M413 400H1237"/>
+  <text x="820" y="386" text-anchor="middle" class="small">Common ground — connect before signals</text>
+
+  <!-- SWCLK -->
+  <path class="wire" d="M413 490H565"/>
+  <rect x="565" y="468" width="120" height="44" rx="8" class="res"/>
+  <text x="625" y="497" text-anchor="middle" class="label">47 Ω</text>
+  <path class="wire" d="M685 490H1237"/>
+  <text x="920" y="476" text-anchor="middle" class="small">SWCLK</text>
+
+  <!-- VTREF sense -->
+  <path class="sense" d="M413 220H760"/>
+  <rect x="790" y="198" width="130" height="44" rx="8" class="res"/>
+  <text x="855" y="227" text-anchor="middle" class="label">10 kΩ</text>
+  <path class="sense" d="M760 220H790M920 220H1237"/>
+  <circle cx="760" cy="220" r="8" class="node"/>
+  <path class="sense" d="M760 220V160"/>
+  <rect x="630" y="138" width="130" height="44" rx="8" class="res"/>
+  <text x="695" y="167" text-anchor="middle" class="label">100 kΩ</text>
+  <path class="ground" d="M630 160H585V175"/>
+  <path class="ground" d="M555 175H615M565 189H605M575 203H595"/>
+  <text x="1010" y="205" text-anchor="middle" class="small">VTREF sense only</text>
+
+  <!-- Reset open-drain circuit -->
+  <path class="reset" d="M413 620H540"/>
+  <rect x="540" y="598" width="120" height="44" rx="8" class="res"/>
+  <text x="600" y="627" text-anchor="middle" class="label">4.7 kΩ</text>
+  <path class="reset" d="M660 620H745"/>
+  <circle cx="715" cy="620" r="8" class="node"/>
+  <path class="reset" d="M715 620V680"/>
+  <rect x="693" y="680" width="44" height="110" rx="8" class="res"/>
+  <text x="680" y="741" text-anchor="end" class="small">100 kΩ</text>
+  <path class="ground" d="M715 790V820M685 820H745M695 834H735M705 848H725"/>
+
+  <!-- NPN open-collector reset switch -->
+  <circle cx="835" cy="620" r="68" fill="#fff" stroke="#d66b20" stroke-width="5"/>
+  <text x="835" y="610" text-anchor="middle" class="label">Q1</text>
+  <text x="835" y="637" text-anchor="middle" class="small">2N3904 NPN</text>
+  <path class="reset" d="M745 620H767"/>
+  <text x="760" y="575" text-anchor="middle" class="tiny">B (BASE)</text>
+  <path class="reset" d="M835 552V530"/><text x="850" y="515" class="tiny">C (COLLECTOR)</text>
+  <path class="ground" d="M835 688V820M805 820H865M815 834H855M825 848H845"/><text x="860" y="680" class="tiny">E (EMITTER)</text>
+  <path class="reset" d="M835 530V580H965"/>
+  <rect x="965" y="558" width="120" height="44" rx="8" class="res"/>
+  <text x="1025" y="587" text-anchor="middle" class="label">100 Ω</text>
+  <path class="reset" d="M1085 580H1237"/>
+  <text x="1080" y="545" text-anchor="middle" class="small">open-collector reset</text>
+
+  <!-- Power note -->
+  <path d="M413 760H540" stroke="#c92f35" stroke-width="6" stroke-linecap="round"/>
+  <text x="430" y="795" class="small" fill="#a51f25">USB / regulated 5 V input</text>
+  <rect x="930" y="700" width="600" height="130" rx="18" fill="#fff0f0" stroke="#c92f35" stroke-width="4"/>
+  <text x="960" y="740" class="label" fill="#a51f25">POWER WARNING</text>
+  <text x="960" y="777" class="small">Never connect printer 24 V to the ESP8266.</text>
+  <text x="960" y="808" class="small">Never connect J11 pin 1 to ESP 3V3.</text>
+
+  <rect x="930" y="840" width="600" height="42" rx="10" fill="#fff8dc" stroke="#a87811" stroke-width="3"/>
+  <text x="1230" y="868" text-anchor="middle" class="small">Typical TO-92, flat face toward you: 1 E | 2 B | 3 C - verify your part</text>
+
+  <!-- Footer -->
+  <rect x="70" y="890" width="1470" height="72" rx="16" fill="#e3ebf5" stroke="#9aacc2" stroke-width="2"/>
+  <text x="805" y="920" text-anchor="middle" class="label">Cable: 10–15 cm • Verify J11 pin 1 and GND with a meter • Keep the SWD plug detachable</text>
+  <text x="805" y="948" text-anchor="middle" class="small">Physical J11 order with board text upright: 1 3.3V | 2 SWDIO | 3 GND | 4 SWCLK | 5 RST</text>
+</svg>
