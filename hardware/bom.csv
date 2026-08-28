@@ -1,0 +1,43 @@
+Ref,Qty,Value / part,Package,Notes
+U1,1,LMR36510ADDAR,SO-PowerPAD-8,65V 1A 400kHz adjustable buck
+U2,1,USBLC6-2SC6,SOT-23-6,USB D+/D- ESD
+U3,1,AP2112K-3.3TRG1,SOT-23-5,USB auxiliary 3.3V LDO
+U4 U5,2,LM66100DCKR,SC70-6,Reverse-blocking ideal diodes
+U6,1,CP2102N-A02-GQFN24,QFN-24,USB-UART bridge
+U7,1,ESP32-WROOM-32E-N4,Module,Preferred current WROOM-32E drop-in family; verify footprint
+D1,1,SMBJ28A,SMB,24V input transient clamp
+D2,1,TPD4E05U06DQAR,WSON-10,Four-channel low-capacitance SWD/VTREF ESD
+Q1,1,2N7002,SOT-23,Open-drain target reset
+L1,1,22uH >=1.5A <=150mOhm,Shielded SMD,Buck inductor
+F1,1,0.75A hold PTC,1812,24V input protection
+F2,1,0.5A hold PTC,1206,USB VBUS protection
+C1,1,2.2uF 100V X7R,1210,Buck input
+C2,1,220nF 100V X7R,0805,Buck high-frequency input
+C3 C8 C9 C15,4,1uF 10V X7R,0603,VCC/LDO/EN capacitors
+C4 C11 C14,3,100nF 16V X7R,0603,Boot and logic decoupling
+C5 C6 C7,3,22uF 10V X7R,1206,Buck output; account for DC bias
+C10 C13,2,10uF 10V X7R,0805,System and ESP bulk
+C20,1,10nF 16V X7R,0603,VTREF ADC filter
+C12 C16 C18,3,4.7uF 10V X7R,0603,CP2102N power-pin bulk capacitors
+C21 C22 C23,3,100nF 10V X7R,0603,CP2102N power-pin bypass capacitors
+R1 R2 R23 R25 R26,5,100k 1%,0603,Enable feedback gate and VTREF
+R3,1,43.2k 1%,0603,LMR36510 feedback bottom
+R4,1,47k 1%,0603,Power-good pull-up
+R5 R6,2,5.1k 1%,0603,USB-C CC sink resistors
+R7 R8,2,470R,0603,USB-UART series protection
+R9 R10 R35,3,10k,0603,EN GPIO0 and FLASH pull-ups
+R20 R21,2,47R,0603,SWDIO and SWCLK source damping
+R22 R24,2,100R,0603,Reset gate/drain damping
+R30 R31 R32 R33 R34,5,2.2k,0603,LED current limiting
+R36,1,1k,0603,CP2102N reset pull-up
+R37,1,22.1k 1%,0603,CP2102N USB VBUS sense divider top
+R38,1,47.5k 1%,0603,CP2102N USB VBUS sense divider bottom
+LED1 LED4,2,Green LED,0603,Power and success
+LED2,1,Blue LED,0603,Wi-Fi
+LED3,1,Amber LED,0603,Flashing
+LED5,1,Red LED,0603,Error
+SW1 SW2 SW3,3,Momentary NO switch,SMD,FLASH authorization ESP reset ESP boot
+J1,1,2-pin 5.08mm terminal block,THT,Printer 24V input
+J2,1,USB-C USB2 receptacle 16-pin,SMD,Programming and auxiliary power
+J3,1,Keyed 1x5 2.54mm header,THT,Detachable BTT SWD cable
+TP1 TP2 TP3 TP4 TP5,5,Test pad,SMD,SWD bring-up and production test
