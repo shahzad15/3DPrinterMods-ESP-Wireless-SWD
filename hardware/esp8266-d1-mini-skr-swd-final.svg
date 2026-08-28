@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="white"/>
+  <g fill="none" stroke="#000" stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="45" y="85" width="190" height="80"/>
+    <rect x="285" y="75" width="270" height="100"/>
+    <path d="M235 125H285"/><path d="M255 112l20 13-20 13" fill="#000"/>
+
+    <rect x="45" y="230" width="290" height="500" rx="5"/>
+    <rect x="1180" y="210" width="365" height="530" rx="5"/>
+
+    <!-- 5 V supply, local capacitors -->
+    <path d="M555 125H740M610 125V270H335"/>
+    <path d="M650 125V150M627 150H673M627 165H673M650 165V180M630 180H670M636 188H664M642 196H658"/>
+    <path d="M730 125V150M707 150H753M707 165H753M730 165V180M710 180H750M716 188H744M722 196H738"/>
+
+    <!-- Common ground: ESP GND to J11 pin 3 -->
+    <path d="M335 480H1180M410 480V760H1080"/>
+
+    <!-- SWDIO -->
+    <path d="M335 390H480"/>
+    <rect x="480" y="375" width="90" height="30"/>
+    <path d="M570 390H1180"/>
+
+    <!-- SWCLK -->
+    <path d="M335 570H480"/>
+    <rect x="480" y="555" width="90" height="30"/>
+    <path d="M570 570H1180"/>
+
+    <!-- D6 to Q1 gate -->
+    <path d="M335 660H500"/>
+    <rect x="500" y="645" width="90" height="30"/>
+    <path d="M590 660H705"/>
+    <!-- gate pulldown -->
+    <circle cx="675" cy="660" r="7" fill="#000"/>
+    <path d="M675 660V690"/>
+    <rect x="660" y="690" width="30" height="55"/>
+    <path d="M675 745V760"/>
+    <!-- Q1 simplified N-MOSFET -->
+    <circle cx="770" cy="650" r="65"/>
+    <path d="M705 660H730M730 615V685M750 610V690M750 625H790M750 675H790M790 625V595M790 675V705"/>
+    <path d="M780 650l-20-10v20z" fill="#000"/>
+    <!-- source to ground, drain to NRST -->
+    <path d="M790 705V760M790 595H850V660H900"/>
+    <rect x="900" y="645" width="90" height="30"/>
+    <path d="M990 660H1180"/>
+
+    <!-- VTREF sense: J11 pin 1 through 10k to A0 -->
+    <path d="M335 300H485"/>
+    <rect x="485" y="285" width="90" height="30"/>
+    <path d="M575 300H1180"/>
+    <circle cx="600" cy="300" r="7" fill="#000"/>
+    <path d="M600 300V330"/>
+    <rect x="585" y="330" width="30" height="55"/>
+    <path d="M600 385V405M580 405H620M586 413H614M592 421H608"/>
+
+    <!-- J11 pin circles -->
+    <circle cx="1180" cy="300" r="8" fill="white"/>
+    <circle cx="1180" cy="390" r="8" fill="white"/>
+    <circle cx="1180" cy="480" r="8" fill="white"/>
+    <circle cx="1180" cy="570" r="8" fill="white"/>
+    <circle cx="1180" cy="660" r="8" fill="white"/>
+
+    <rect x="55" y="825" width="1490" height="95" rx="4"/>
+  </g>
+
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif">
+    <text x="800" y="52" font-size="35" font-weight="700" text-anchor="middle">ESP8266 D1 MINI Wi-Fi SWD PROGRAMMER — FINAL WIRING</text>
+    <text x="140" y="135" font-size="25" font-weight="700" text-anchor="middle">PRINTER 24 V</text>
+    <text x="420" y="112" font-size="24" font-weight="700" text-anchor="middle">24 V → 5 V BUCK</text>
+    <text x="420" y="145" font-size="20" font-weight="700" text-anchor="middle">≥40 V INPUT, ≥500 mA</text>
+
+    <text x="190" y="270" font-size="29" font-weight="700" text-anchor="middle">ESP8266 D1 MINI</text>
+    <text x="320" y="278" font-size="22" text-anchor="end">5V</text>
+    <text x="320" y="308" font-size="22" text-anchor="end">A0</text>
+    <text x="320" y="398" font-size="22" text-anchor="end">D2 / GPIO4</text>
+    <text x="320" y="488" font-size="22" text-anchor="end">GND</text>
+    <text x="320" y="578" font-size="22" text-anchor="end">D1 / GPIO5</text>
+    <text x="320" y="668" font-size="22" text-anchor="end">D6 / GPIO12</text>
+
+    <text x="650" y="220" font-size="18" text-anchor="middle">100 µF</text>
+    <text x="730" y="220" font-size="18" text-anchor="middle">100 nF</text>
+    <text x="525" y="368" font-size="20" text-anchor="middle">47 Ω</text>
+    <text x="525" y="548" font-size="20" text-anchor="middle">47 Ω</text>
+    <text x="545" y="638" font-size="20" text-anchor="middle">100 Ω</text>
+    <text x="650" y="720" font-size="19" text-anchor="end">100 kΩ</text>
+    <text x="530" y="278" font-size="20" text-anchor="middle">10 kΩ</text>
+    <text x="625" y="365" font-size="19">100 kΩ</text>
+    <text x="770" y="560" font-size="23" font-weight="700" text-anchor="middle">Q1 2N7002</text>
+    <text x="695" y="648" font-size="20" font-weight="700">G</text>
+    <text x="805" y="600" font-size="20" font-weight="700">D</text>
+    <text x="805" y="710" font-size="20" font-weight="700">S</text>
+    <text x="945" y="638" font-size="20" text-anchor="middle">100 Ω</text>
+    <text x="820" y="735" font-size="18" font-weight="700">OPEN-DRAIN RESET</text>
+    <text x="760" y="278" font-size="19" font-weight="700">VTREF SENSE ONLY — NEVER POWER SKR</text>
+    <text x="760" y="790" font-size="18" font-weight="700">COMMON GROUND</text>
+
+    <text x="1362" y="252" font-size="25" font-weight="700" text-anchor="middle">BTT SKR MINI E3 V3.0 — J11</text>
+    <text x="1205" y="308" font-size="22">1  VTREF 3.3 V (SENSE ONLY)</text>
+    <text x="1205" y="398" font-size="22">2  SWDIO / PA13</text>
+    <text x="1205" y="488" font-size="22">3  GND</text>
+    <text x="1205" y="578" font-size="22">4  SWCLK / PA14</text>
+    <text x="1205" y="668" font-size="22">5  NRST / PF2</text>
+
+    <text x="800" y="864" font-size="25" font-weight="700" text-anchor="middle">IMPORTANT: J11 PIN 1 IS SENSE ONLY. NEVER CONNECT IT TO ESP 3.3 V OR 5 V.</text>
+    <text x="800" y="900" font-size="21" text-anchor="middle">Verify the exact 2N7002 G/D/S pin order from its manufacturer’s datasheet before soldering.</text>
+    <text x="800" y="960" font-size="18" text-anchor="middle">Power: printer 24 V → protected 5 V buck → D1 Mini 5V pin. Do not power the SKR through J11.</text>
+  </g>
+</svg>
