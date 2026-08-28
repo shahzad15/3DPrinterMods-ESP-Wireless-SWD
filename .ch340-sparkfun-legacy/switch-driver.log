@@ -1,0 +1,73 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260809001054
+Username: DESKTOP-6DSN5MC\shahzad
+RunAs User: DESKTOP-6DSN5MC\shahzad
+Configuration Name: 
+Machine: DESKTOP-6DSN5MC (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\shahzad\Documents\python project\ESP seconf project\.ch340-sparkfun-legacy\switch-to-compatible-driver.ps1
+Process ID: 32028
+PSVersion: 5.1.26100.8972
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8972
+BuildVersion: 10.0.26100.8972
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\shahzad\Documents\python project\ESP seconf project\.ch340-sparkfun-legacy\switch-driver.log
+Staging Microsoft-signed CH340 driver 3.4.2014.08...
+Microsoft PnP Utility
+
+Adding driver package:  CH341SER.INF
+Driver package added successfully. (Already exists in the system)
+Published Name:         oem59.inf
+
+Total driver packages:  1
+Added driver packages:  1
+Temporarily disabling only USB\VID_1A86&PID_7523\5&18A0A658&0&7...
+Microsoft PnP Utility
+
+Disabling device:          USB\VID_1A86&PID_7523\5&18a0a658&0&7
+Device disabled successfully.
+Removing incompatible active package oem57.inf...
+Microsoft PnP Utility
+
+Ignoring /force when used with /uninstall to delete driver package.
+Driver package uninstalled.
+Driver package deleted successfully.
+Re-enabling the CH340 device...
+Microsoft PnP Utility
+
+Enabling device:          USB\VID_1A86&PID_7523\5&18a0a658&0&7
+Device enabled successfully.
+Microsoft PnP Utility
+
+Scanning for device hardware changes.
+Scan complete.
+Microsoft PnP Utility
+
+Instance ID:                USB\VID_1A86&PID_7523\5&18a0a658&0&7
+Device Description:         USB-SERIAL CH340 (COM1)
+Class Name:                 Ports
+Class GUID:                 {4d36e978-e325-11ce-bfc1-08002be10318}
+Manufacturer Name:          wch.cn
+Status:                     Started
+Driver Name:                oem59.inf
+Matching Drivers:
+    Driver Name:            oem59.inf
+    Original Name:          ch341ser.inf
+    Provider Name:          wch.cn
+    Class Name:             Ports
+    Class GUID:             {4d36e978-e325-11ce-bfc1-08002be10318}
+    Driver Version:         08/08/2014 3.4.2014.8
+    Signer Name:            Microsoft Windows Hardware Compatibility Publisher
+    Matching Device ID:     USB\VID_1A86&PID_7523
+    Driver Rank:            00FF0001
+    Driver Status:          Best Ranked / Installed
+Driver switch completed successfully.
+**********************
+Windows PowerShell transcript end
+End time: 20260809001101
+**********************
