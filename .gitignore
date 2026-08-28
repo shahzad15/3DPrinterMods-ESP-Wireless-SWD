@@ -1,0 +1,11 @@
+.pio/
+.research/
+.venv/
+.idea/
+__pycache__/
+*.pyc
+include/WifiSecrets.hpp
+schematic.txt
+pinout.txt
+*_SCH.png
+*_PIN.png
